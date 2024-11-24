@@ -1,42 +1,359 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e9cacb;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+.header {
+  background-color: #491011;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 24px;
+  color: white;
+}
+
+.header nav {
+  display: flex;
+  gap: 40px;
+}
+
+.header nav a {
+  color: white;
+}
+
+.header nav a:hover{
+  text-decoration: underline;
+} 
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;      
+    align-items: center;    
+    text-align: center;
+  }
+
+  .header nav {
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+  }
+
+  .header .logo {
+    margin-bottom: 10px; 
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@media (max-width: 480px) {
+  .header {
+    padding: 10px; 
+  }
+
+  .header .logo {
+    font-size: 20px;          
+  }
+
+  .header nav {
+    gap: 10px;         
+  }
+
+  .header nav a {
+    font-size: 14px;          
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+/* footer style */ 
+
+footer {
+  background-color: aliceblue;
+font-size: 14px; 
+  color: black;
+  text-align: center;
+  padding: 20px;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+footer p {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Home page */
+
+.hero {
+  background-color: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  color: black;
+  padding-left: 60px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.hero h1 {
+  font-size: 53px;
+  text-shadow: red;
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.hero button {
+  margin-top: 25px;
+  padding: 15px 20px;
+  background-color: #430405;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover{
+  background-color: #321717;
+} 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px;        
+    text-align: center;          
+    align-items: center;      
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 18px; 
+    max-width: 100%; 
+  }
+
+  .hero button {
+    font-size: 16px; 
+    padding: 10px 20px;
   }
 }
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 15px; 
+  }
+
+  .hero h1 {
+    font-size: 32px; 
+  }
+
+  .hero p {
+    font-size: 16px; 
+  }
+
+  .hero button {
+    font-size: 14px; 
+    padding: 8px 16px;
+  }
+}
+
+
+/* about page */
+
+.about {
+  background-size: cover;
+  background-position: center;
+  color: black;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: flex-start;
+   align-items: center;
+   height: 80vh;
+}
+.about-content {
+  max-width: 500px;
+  text-align: left;
+  background: #93b3b1;
+  padding: 30px;
+  border-radius: 10px; 
+}
+.about-content p {
+  padding-top: 10px;
+}
+.heading{
+  text-align: center;
+  font-size: bold;
+}
+
+/* collection */
+
+.dresses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 20px; 
+  justify-items: center; 
+  padding: 20px;
+}
+
+.dress-card {
+  width: 100%; 
+  max-width: 300px; 
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ec6e6e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dress-card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dress-image {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover; 
+  display: block; 
+}
+
+.dress-card-content {
+  padding: 5px; 
+  background-color: #eeebeb; 
+  text-align: center; 
+}
+
+.dress-name {
+  font-size: 1.4em; 
+  font-weight: 600;
+  margin: 10px 0; 
+  color: #333;
+}
+
+.dress-description {
+  color: #666;
+  font-size: 0.9em; 
+  margin: 5px 0 10px; 
+  line-height: 1.4; 
+}
+
+.dress-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #091e32;
+}
+
+
+.add-to-cart {
+  background: #f44343;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background: #ee8d8d;
+  transform: scale(1.05); 
+}
+
+/* contact */
+
+.contact-form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-form h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333333;
+  animation: fade-in 1s ease-in-out;
+}
+
+/* Form inputs and textarea */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button styling */
+.contact-form button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
