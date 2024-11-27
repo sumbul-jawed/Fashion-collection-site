@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const Page = () => {
@@ -16,7 +17,7 @@ const Page = () => {
     <div className="dresses">
       {collectionData.map((dress) => (
         <div key={dress.id} className="dress-card">
-          <img src={dress.image} alt={dress.name} className="dress-image" />
+          <Image src={dress.image} alt={dress.name} width={600} height={600} className="dress-image" />
           <div className="dress-card-content">
             <h3 className="dress-name">{dress.name}</h3>
             <p className="dress-description">{dress.Description}</p>
