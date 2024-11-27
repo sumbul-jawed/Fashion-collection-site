@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,12 +10,14 @@ body {
   color: black;
 }
 
-a{
+a {
   text-decoration: none;
   color: #333;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: bold;
 }
 
@@ -42,53 +44,53 @@ h1, h2, h3 {
   color: white;
 }
 
-.header nav a:hover{
+.header nav a:hover {
   text-decoration: underline;
-} 
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;      
-    align-items: center;    
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .header nav {
-    flex-wrap: wrap; 
-    gap: 20px; 
-    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
   }
 
   .header .logo {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .header {
-    padding: 10px; 
+    padding: 10px;
   }
 
   .header .logo {
-    font-size: 20px;          
+    font-size: 20px;
   }
 
   .header nav {
-    gap: 10px;         
+    gap: 10px;
   }
 
   .header nav a {
-    font-size: 14px;          
+    font-size: 14px;
   }
 }
 
 
-/* footer style */ 
+/* footer style */
 
 footer {
   background-color: aliceblue;
-font-size: 14px; 
+  font-size: 14px;
   color: black;
   text-align: center;
   padding: 20px;
@@ -135,15 +137,16 @@ footer p {
   transition: background-color 0.3s ease;
 }
 
-.hero button:hover{
+.hero button:hover {
   background-color: #321717;
-} 
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
-    padding: 20px;        
-    text-align: center;          
-    align-items: center;      
+    padding: 20px;
+    text-align: center;
+    align-items: center;
   }
 
   .hero h1 {
@@ -151,31 +154,31 @@ footer p {
   }
 
   .hero p {
-    font-size: 18px; 
-    max-width: 100%; 
+    font-size: 18px;
+    max-width: 100%;
   }
 
   .hero button {
-    font-size: 16px; 
+    font-size: 16px;
     padding: 10px 20px;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 15px; 
+    padding: 15px;
   }
 
   .hero h1 {
-    font-size: 32px; 
+    font-size: 32px;
   }
 
   .hero p {
-    font-size: 16px; 
+    font-size: 16px;
   }
 
   .hero button {
-    font-size: 14px; 
+    font-size: 14px;
     padding: 8px 16px;
   }
 }
@@ -187,23 +190,32 @@ footer p {
   background-size: cover;
   background-position: center;
   color: black;
-  padding: 80px 20px;
+  padding: 0 20px;
   display: flex;
   justify-content: flex-start;
-   align-items: center;
-   height: 80vh;
+  align-items: center;
+  height: 80vh;
+  /* margin-top: 100px; */
 }
+
 .about-content {
   max-width: 500px;
-  text-align: left;
   background: #93b3b1;
   padding: 30px;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
+
+@media (min-width: 600px){
+  .about-content{
+    margin: 100px 0;
+  }
+}
+
 .about-content p {
   padding-top: 10px;
 }
-.heading{
+
+.heading {
   text-align: center;
   font-size: bold;
 }
@@ -212,15 +224,15 @@ footer p {
 
 .dresses {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  gap: 20px; 
-  justify-items: center; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
   padding: 20px;
 }
 
 .dress-card {
-  width: 100%; 
-  max-width: 300px; 
+  width: 100%;
+  max-width: 300px;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
@@ -230,35 +242,35 @@ footer p {
 }
 
 .dress-card:hover {
-  transform: translateY(-10px); 
+  transform: translateY(-10px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .dress-image {
   width: 100%;
-  height: 300px; 
-  object-fit: cover; 
-  display: block; 
+  height: 300px;
+  object-fit: cover;
+  display: block;
 }
 
 .dress-card-content {
-  padding: 5px; 
-  background-color: #eeebeb; 
-  text-align: center; 
+  padding: 5px;
+  background-color: #eeebeb;
+  text-align: center;
 }
 
 .dress-name {
-  font-size: 1.4em; 
+  font-size: 1.4em;
   font-weight: 600;
-  margin: 10px 0; 
+  margin: 10px 0;
   color: #333;
 }
 
 .dress-description {
   color: #666;
-  font-size: 0.9em; 
-  margin: 5px 0 10px; 
-  line-height: 1.4; 
+  font-size: 0.9em;
+  margin: 5px 0 10px;
+  line-height: 1.4;
 }
 
 .dress-price {
@@ -281,7 +293,7 @@ footer p {
 
 .add-to-cart:hover {
   background: #ee8d8d;
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 /* contact */
@@ -349,11 +361,9 @@ footer p {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
-
-
